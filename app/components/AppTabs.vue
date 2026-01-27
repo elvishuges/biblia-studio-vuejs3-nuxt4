@@ -6,9 +6,7 @@
       </div>
     </template>
 
-    <template #about="{ item }">
-      <About />
-    </template>
+    <template #about="{ item }"> Sobre </template>
   </UTabs>
 </template>
 
