@@ -1,8 +1,12 @@
 <template>
-  <UTabs :items="items" variant="link" class="gap-4 w-full">
+  <UTabs
+    :items="items"
+    variant="link"
+    class="fixed top-0 left-0 right-0 z-50 shadow-md"
+  >
     <template #bible="{ item }">
-      <div class="px-12">
-        <Bible />
+      <div class="max-h-screen overflow-y-auto">
+        <TabBible />
       </div>
     </template>
 
@@ -12,7 +16,7 @@
 
 <script setup lang="ts">
 import type { TabsItem } from "@nuxt/ui";
-import Bible from "./Tabs/Bible.vue";
+import TabBible from "./TabBible.vue";
 
 const items = [
   {
